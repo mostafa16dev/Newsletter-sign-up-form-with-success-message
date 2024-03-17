@@ -1,0 +1,216 @@
+:root {
+    --tomato-color: hsl(4, 100%, 67%);
+    --dark-slate-gray-color: hsl(234, 29%, 20%);
+    --charcoal-grey-color: hsl(235, 18%, 26%);
+    --grey-color: hsl(231, 7%, 60%);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+}
+
+body {
+    background-color: var(--charcoal-grey-color);
+    height: 100vh;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    /* padding: 220px 0; */
+}
+
+.card {
+    width: 928px;
+    height: 640px;
+    background-color: white;
+    display: grid;
+    grid-template-columns: 1.2fr .8fr;
+    padding: 24px;
+    padding-left: 64px;
+    column-gap: 3.99rem;
+    border-radius: 35px;
+}
+
+.card-body {
+    /* display: grid;
+    align-items: center; */
+    padding: 68px 0;
+}
+
+.card-title {
+    font-size: 3.5em;
+    font-weight: 700;
+    color: var(--dark-slate-gray-color);
+    margin-bottom: 1.2rem;
+}
+
+.card-subtitle {
+    line-height: 1.5rem;
+    color: var(--dark-slate-gray-color);
+    margin-bottom: 1.5rem;
+}
+
+.card ul {
+    list-style: none;
+    color: var(--dark-slate-gray-color);
+    margin-bottom: 2.7rem;
+}
+
+ul li {
+    background-image: url(assets/images/icon-list.svg);
+    background-repeat: no-repeat;
+    line-height: 22px;
+    padding-left: 2.3rem;
+    margin-bottom: .75rem;
+}
+
+form {
+    display: grid;
+    /* row-gap: .5rem; */
+}
+
+form .row {
+    display: flex;
+    justify-content: space-between;
+}
+
+form label {
+    font-size: .75rem;
+    font-weight: 700;
+    color: var(--dark-slate-gray-color);
+    margin-bottom: .6rem;
+}
+
+form .invalid-email {
+    display: none;
+    color: var(--tomato-color);
+    font-size: .75rem;
+    font-weight: 700;
+}
+
+form input {
+    padding: 1.1rem 1.44rem;
+    border-radius: 8px;
+    border: 1px solid var(--grey-color);
+    outline: none;
+    opacity: .5;
+    margin-bottom: 1.5rem;
+    cursor: pointer;
+}
+
+form input::placeholder {
+    color: var(--charcoal-grey-color);
+}
+
+form input:active,
+form input:focus {
+    border-color: var(--dark-slate-gray-color);
+    color: var(--charcoal-grey-color);
+    opacity: 1;
+    cursor: pointer;
+}
+
+form button {
+    background-color: var(--dark-slate-gray-color);
+    color: white;
+    padding: 1.22rem 0;
+    border: none;
+    border-radius: 8px;
+    font-weight: 400;
+    font-size: .92rem;
+    letter-spacing: .7px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: var(--tomato-color);
+}
+
+.success-card {
+    display: none;
+    width: 504px;
+    height: 520px;
+    border-radius: 35px;
+    background-color: white;
+    padding: 48px 65px 60px 64px;
+}
+
+.success-card h2 {
+    font-size: 3.5rem;
+    line-height: 3.5rem;
+    color: var(--dark-slate-gray-color);
+    margin-bottom: -1rem;
+}
+
+.success-card p {
+    color: var(--dark-slate-gray-color);
+    line-height: 1.5rem;
+    font-weight: 400;
+}
+
+.success-card span {
+    font-weight: 700;
+}
+
+.success-card button {
+    background-color: var(--dark-slate-gray-color);
+    color: white;
+    border-radius: 8px;
+    border: none;
+    max-height: 3.5rem;
+    cursor: pointer;
+}
+
+.success-card button:hover {
+    background-color: var(--tomato-color);
+}
+
+@media (max-width: 899px) {
+    .card {
+        width: auto;
+        height: auto;
+        padding: 0;
+        grid-template-columns: 1fr;
+        border-radius: 0;
+    }
+
+    .card-body {
+        order: 2;
+        max-width: 375px;
+        padding: 2rem 1.5rem 3.1rem;
+    }
+
+    .card-title {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .success-card {
+        padding: 5rem 2rem 0;
+        border-radius: 0;
+        /* width: auto; */
+        height: 100%;
+        grid-template-rows: 1.1fr 1fr 2fr 1fr;
+    }
+
+    .success-card h2 {
+        font-size: 3rem;
+    }
+
+}
+
+@media (max-width: 504px) {
+    .success-card {
+        width: auto;
+        padding: 5rem 2.5rem 0;
+    }
+
+    .success-card h2 {
+        font-size: 2.5rem;
+        line-height: 2.8rem;
+    }
+}
